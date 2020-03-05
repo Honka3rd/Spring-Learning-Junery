@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here -->
+    
+ 	<bean id="myCoach"
+ 		class="com.spring.demo.BaseballCoach">	 
+ 		<property name="s" ref="happyService"></property>
+		<property name="email" value="123@r.com"></property>
+		<property name="name" value="coach_a"></property>	
+ 	</bean>
+ 	
+ 	<context:property-placeholder location="classpath:SportProperties"/>
+ 	<bean id="anotherCoach" 
+ 		class="com.spring.demo.BasketballCoach">
+ 		<constructor-arg ref="happyService"></constructor-arg>
+ 		<property name="email" value="${email}"></property>
+ 		<property name="name" value="${name}"></property>
+ 	</bean>
+ 		
+ 	<bean id="happyService" 
+ 		class="com.spring.demo.HappyFortuneService"></bean>
+ 		
+</beans>
+
+
+
+
+
