@@ -8,3 +8,6 @@ Spring JAR下载链接 链接：https://share.weiyun.com/5Tppxk4
 
 服务器：Tomcat 8.0
 https://tomcat.apache.org/download-80.cgi
+
+Hibernate download:
+https://hibernate.org/orm/releases/5.4/
